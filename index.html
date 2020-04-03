@@ -1,25 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <title>COVID-19 Tracking</title>
-<style>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>COVID-19 in NYC</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
 
-html, body, {
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        text {
+            font-family: arial;
+            font-size: 12px;
+        }
+
+
+        path.line {
+            fill: none;
+            stroke: red;
+            stroke-width: 3px;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: slategray;
+          shape-rendering: crispEdges;
+        }
+    </style>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+var parseDate = d3.timeParse("%Y-%m-%d");
+
+var margin = {left: 50, right: 20, top: 20, bottom: 50 };
+
+var width = 960 - margin.left - margin.right;
+var height = 500 - margin.top - margin.bottom;
+
+
+var max = 0;
+
+var xNudge = 50;
+var yNudge = 20;
+
+var minDate = new Date();
+var maxDate = new Date();
+
+
+//Function for converting CSV values from strings to Dates and numbers
+var rowConverter = function(d) {
+    return {
+        date: parseDate(d.date),
+        county: d.county,
+        cases: parseFloat(d.cases)
+    };
 }
 
-</style>
-<body>
-<h2>Tracking COVID-19 in New York, South Korea, Italy</h2>
-<p>A work in progress. Updates as data is added. Data Source: Johns Hopkins University CSSEGIS.</p>
-<p>DISCLAIMER: I don't claim to be an expert in epidemiology. Just interested in data and information!</p>
-<img src="NY.svg" height="auto" width="100%"/>
-<img src="NY_log.svg" height="auto" width="100%"/>
-<img src="SK.svg" height="auto" width="100%"/>
-<img src="IT.svg" height="auto" width="100%"/>
-</body>
+// var filtered = data.filter(function(d) {
+//   return d["Crime Category Description"] === "THEFT" || d["Crime Category Description"] === "BATTERY"
+// })
+
+d3.dsv(",", "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv", rowConverter).then(function(data) {
+
+        dataset = data.filter(function(d) {
+              return d["county"] === "New York City"
+            });
+        console.log(dataset)
+
+        max = d3.max(dataset, function(d) { return d.cases; });
+        minDate = d3.min(dataset, function(d) {return d.date; });
+        maxDate = d3.max(dataset, function(d) { return d.date; });
+
+
+        var y = d3.scaleLinear()
+                    .domain([0,max])
+                    .range([height,0]);
+
+        var x = d3.scaleTime()
+                    .domain([minDate,maxDate])
+                    .range([0,width]);
+
+        var yAxis = d3.axisLeft(y);
+
+        var xAxis = d3.axisBottom(x);
+
+        var line = d3.line()
+            .x(function(d){ return x(d.date); })
+            .y(function(d){ return y(d.cases); })
+            .curve(d3.curveCardinal);
+
+
+        var svg = d3.select("body").append("svg").attr("id","svg").attr("height","100%").attr("width","100%");
+        var chartGroup = svg.append("g").attr("class","chartGroup").attr("transform","translate("+xNudge+","+yNudge+")");
+
+        chartGroup.append("path")
+            .attr("class","line")
+            .attr("d",function(d){ return line(dataset); })
+
+
+        chartGroup.append("g")
+            .attr("class","axis x")
+            .attr("transform","translate(0,"+height+")")
+            .call(xAxis);
+
+        chartGroup.append("g")
+            .attr("class","axis y")
+            .call(yAxis);
+
+        //Create title
+        chartGroup.append("text")
+            .attr("x", (width / 2))
+            .attr("y", 16)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .text("COVID-19 Confirmed Cases in NYC");
+
+
+
+    });
+
+
+
+
+
+    </script>
+  </body>
 </html>
