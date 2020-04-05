@@ -22,7 +22,7 @@
         path.line {
             fill: none;
             stroke: red;
-            stroke-width: 3px;
+            stroke-width: 2px;
         }
 
         .axis path,
@@ -50,8 +50,8 @@ var max = 0;
 var xNudge = 50;
 var yNudge = 20;
 
-var minDate = new Date();
-var maxDate = new Date();
+// var minDate = new Date();
+// var maxDate = new Date();
 
 
 //Function for converting CSV values from strings to Dates and numbers
@@ -59,20 +59,16 @@ var rowConverter = function(d) {
     return {
         date: parseDate(d.date),
         county: d.county,
-        cases: parseFloat(d.cases)
+        cases: parseFloat(d.cases),
+        deaths: parseFloat(d.deaths)
     };
 }
-
-// var filtered = data.filter(function(d) {
-//   return d["Crime Category Description"] === "THEFT" || d["Crime Category Description"] === "BATTERY"
-// })
 
 d3.dsv(",", "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv", rowConverter).then(function(data) {
 
         dataset = data.filter(function(d) {
               return d["county"] === "New York City"
             });
-        console.log(dataset)
 
         max = d3.max(dataset, function(d) { return d.cases; });
         minDate = d3.min(dataset, function(d) {return d.date; });
@@ -101,7 +97,9 @@ d3.dsv(",", "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-c
         var chartGroup = svg.append("g").attr("class","chartGroup").attr("transform","translate("+xNudge+","+yNudge+")");
 
         chartGroup.append("path")
-            .attr("class","line")
+            .style("stroke","blue")
+            .style("fill","none")
+            .style("stroke-width","2px")
             .attr("d",function(d){ return line(dataset); })
 
 
@@ -126,8 +124,63 @@ d3.dsv(",", "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-c
 
     });
 
+d3.dsv(",", "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv", rowConverter).then(function(data) {
+
+        dataset = data.filter(function(d) {
+              return d["county"] === "New York City"
+            });
+
+        max = d3.max(dataset, function(d) { return d.deaths; });
+        minDate = d3.min(dataset, function(d) {return d.date; });
+        maxDate = d3.max(dataset, function(d) { return d.date; });
 
 
+        var y = d3.scaleLinear()
+                    .domain([0,max])
+                    .range([height,0]);
+
+        var x = d3.scaleTime()
+                    .domain([minDate,maxDate])
+                    .range([0,width]);
+
+        var yAxis = d3.axisLeft(y);
+
+        var xAxis = d3.axisBottom(x);
+
+        var line = d3.line()
+            .x(function(d){ return x(d.date); })
+            .y(function(d){ return y(d.deaths); })
+            .curve(d3.curveCardinal);
+
+
+        var chart2 = d3.select("body").append("svg").attr("id","chart2").attr("height","100%").attr("width","100%");
+        var chartGroup2 = chart2.append("g").attr("class","chartGroup").attr("transform","translate("+xNudge+","+yNudge+")");
+
+        chartGroup2.append("path")
+            .attr("class","line")
+            .attr("d",function(d){ return line(dataset); })
+
+
+        chartGroup2.append("g")
+            .attr("class","axis x")
+            .attr("transform","translate(0,"+height+")")
+            .call(xAxis);
+
+        chartGroup2.append("g")
+            .attr("class","axis y")
+            .call(yAxis);
+
+        //Create title
+        chartGroup2.append("text")
+            .attr("x", (width / 2))
+            .attr("y", 16)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .text("COVID-19 Deaths in NYC");
+
+
+
+    });
 
 
     </script>
