@@ -69,6 +69,14 @@
             font-weight: bold;
         }
 
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.6;
+            shape-rendering: crispEdges
+          }
+        .grid path {
+            stroke-width: 0;
+
     </style>
   </head>
   <body>
@@ -95,7 +103,6 @@ var tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("display", "none");
 
-
 //Function for converting CSV values from strings to Dates and numbers
 var rowConverter = function(d) {
     return {
@@ -118,7 +125,7 @@ d3.dsv(",", "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-c
 
 
         var y = d3.scaleLinear()
-                    .domain([0,max])
+                    .domain([1,max])
                     .range([height,0]);
 
         var x = d3.scaleTime()
@@ -138,6 +145,15 @@ d3.dsv(",", "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-c
             .x(function(d){ return x(d.date); })
             .y(function(d){ return y(d.deaths); })
             //.curve(d3.curveCardinal);
+
+        function make_x_gridlines() {
+            return d3.axisBottom(x)
+                .ticks(8)
+            }
+        function make_y_gridlines() {
+            return d3.axisLeft(y)
+                .ticks(5)
+            }
 
         var svg = d3.select("body").append("svg").attr("id","svg").attr("height","100%").attr("width","100%");
         var chartGroup = svg.append("g").attr("class","chartGroup").attr("transform","translate("+xNudge+","+yNudge+")");
@@ -230,6 +246,21 @@ d3.dsv(",", "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-c
             .style("font-size", "16px")
             .text("COVID-19 Confirmed Cases and Deaths in NYC");
 
+        chartGroup.append("g")
+            .attr("class","grid")
+            .attr("transform","translate(0," + height + ")")
+            .style("stroke-dasharray",("3,3"))
+            .call(make_x_gridlines()
+                .tickSize(-height)
+                .tickFormat("")
+             )
+        chartGroup.append("g")
+                .attr("class","grid")
+                .style("stroke-dasharray",("3,3"))
+                .call(make_y_gridlines()
+                    .tickSize(-width)
+                    .tickFormat("")
+                 )
 
 
     });
