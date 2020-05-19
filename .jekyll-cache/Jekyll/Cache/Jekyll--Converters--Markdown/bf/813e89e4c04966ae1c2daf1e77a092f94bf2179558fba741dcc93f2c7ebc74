@@ -1,0 +1,9 @@
+I"%<p>This is Part 2 of 2. I decided to take on the [Occupancy dataset from UCI Machine Learning][occupancy]. With this dataset, I wanted to accomplish 2 tasks:</p>
+
+<ol>
+  <li>Predict the occupancy of a room given parameters.</li>
+  <li>Conduct Time Series Analysis to forecast the parameters and predict occupancy.</li>
+</ol>
+
+<p>The tasks may sound similar, but they’re actually different. The first one does not take the time into account, but rather uses the parameters or a subset of the parameters given (Light, Humidity, Temperature, CO2, etc.) to predict the occupancy of the room (binary -&gt; 0 or 1). The second task actually does take the time into account, and forecasts the individual parameters to predict the occupancy of the room at specific times where the parameters were forecast.</p>
+:ET
