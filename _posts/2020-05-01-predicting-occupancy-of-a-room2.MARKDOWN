@@ -211,7 +211,7 @@ plt.title('Temperature');
 ```
 
 
-![png](output_108_0.png)
+![png](/images/output_108_0.png)
 
 
 
@@ -327,7 +327,7 @@ df_val.plot(y=["Temperature", "TempForecast"], figsize=(15,4))
 
 
 
-![png](output_113_1.png)
+![png](/images/output_113_1.png)
 
 
 
@@ -362,7 +362,7 @@ df_val.plot(y=["Humidity", "HumForecast"], figsize=(15,4))
 
 
 
-![png](output_115_1.png)
+![png](/images/output_115_1.png)
 
 
 
@@ -394,7 +394,7 @@ df_val.plot(y=["Light", "LightForecast"], figsize=(15,4))
 
 
 
-![png](output_116_1.png)
+![png](/images/output_116_1.png)
 
 
 
@@ -425,7 +425,7 @@ df_val.plot(y=["CO2", "CO2Forecast"], figsize=(15,4))
 
 
 
-![png](output_117_1.png)
+![png](/images/output_117_1.png)
 
 
 Predict Occupancy with forecasted parameters
@@ -557,7 +557,7 @@ print("Testing accuracy out of a total %d points : %f" % (X_test.shape[0], accur
     Testing accuracy out of a total 4880 points : 0.897336
 
 
-The accuracy on the test set was 0.897336. Not bad. The accuracy would be improved if the variables were forecasted better. Now plot the confusion matrix.
+The accuracy on the test set was **0.897336**. Not bad. The accuracy would be improved if the variables were forecasted better. Now plot the confusion matrix.
 
 
 ```python
@@ -583,11 +583,11 @@ for title, normalize in titles_options:
 
 
 
-![png](output_130_1.png)
+![png](/images/output_130_1.png)
 
 
 
-![png](output_130_2.png)
+![png](/images/output_130_2.png)
 
 
 #### Conclusion

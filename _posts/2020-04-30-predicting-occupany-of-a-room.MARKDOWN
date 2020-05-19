@@ -504,7 +504,7 @@ plt.show()
 ```
 
 
-![png](output_14_0.png)
+![png](/images/output_14_0.png)
 
 
 There appears to be some correlation between the variables, which can be seen from when the peaks occur. The occupancy seems less correlated to Humidity than it does with Light and CO2. Light seems to be the most important factor, since there are dips in the occupancy that coincide with dips in Light. There seems to be periodicity in the occupancy, where the occupancy can be 1 during "normal working hours" (i.e., 9am-6pm). However, there was no occupancy on 2 consecutive dates, 2015-02-07 and 2015-02-08. Perhaps those dates were the weekend, which indicates conditional seasonality. For those 2 dates, the CO2 levels were also very low with no peaks. Since the date range is small, assume no overall underlying trends in the variables. There also seems to be a high outlier in the Light data, with the value of 1546.3 within the day of 2015-02-07.
@@ -513,7 +513,7 @@ Check for Seasonality in parameters
 
 
 ```python
-# Perform seasonality decomposion for Temperature, period = 1 day
+# Perform seasonality decomposition for Temperature, period = 1 day
 seas_d = seasonal_decompose(df_train['Temperature'], period = (60*24))
 fig=seas_d.plot()
 fig.set_figheight(4)
@@ -521,12 +521,12 @@ plt.show()
 ```
 
 
-![png](output_17_0.png)
+![png](/images/output_17_0.png)
 
 
 
 ```python
-# Perform seasonality decomposion for Light, period = 1 day
+# Perform seasonality decomposition for Light, period = 1 day
 seas_d = seasonal_decompose(df_train['Light'], period = (60*24))
 fig=seas_d.plot()
 fig.set_figheight(4)
@@ -534,12 +534,12 @@ plt.show()
 ```
 
 
-![png](output_18_0.png)
+![png](/images/output_18_0.png)
 
 
 
 ```python
-# Perform seasonality decomposion for CO2, period = 1 day
+# Perform seasonality decomposition for CO2, period = 1 day
 seas_d = seasonal_decompose(df_train['CO2'], period = (60*24))
 fig=seas_d.plot()
 fig.set_figheight(4)
@@ -547,12 +547,12 @@ plt.show()
 ```
 
 
-![png](output_19_0.png)
+![png](/images/output_19_0.png)
 
 
 
 ```python
-# Perform seasonality decomposion for HumidityRatio, period = 1 day
+# Perform seasonality decomposition for HumidityRatio, period = 1 day
 seas_d = seasonal_decompose(df_train['HumidityRatio'], period = (60*24))
 fig=seas_d.plot()
 fig.set_figheight(4)
@@ -560,7 +560,7 @@ plt.show()
 ```
 
 
-![png](output_20_0.png)
+![png](/images/output_20_0.png)
 
 
 Perform Granger Causality Tests
@@ -905,7 +905,7 @@ plt.show()
 ```
 
 
-![png](output_43_0.png)
+![png](/images/output_43_0.png)
 
 
 
@@ -915,7 +915,7 @@ plt.show()
 ```
 
 
-![png](output_44_0.png)
+![png](/images/output_44_0.png)
 
 
 
@@ -925,7 +925,7 @@ plt.show()
 ```
 
 
-![png](output_45_0.png)
+![png](/images/output_45_0.png)
 
 
 The plots confirm that the hours for occupancy tend to be roughly between 9am-6pm.
@@ -1122,7 +1122,7 @@ plt.show()
 ```
 
 
-![png](output_52_0.png)
+![png](/images/output_52_0.png)
 
 
 This is most likely an error, so we'll assume that the data for that spike can be removed and imputed.
@@ -1170,7 +1170,7 @@ plt.show()
 ```
 
 
-![png](output_58_0.png)
+![png](/images/output_58_0.png)
 
 
 CO2 also had some unusually high spikes near the end of the day on 2015-02-09. Let's zoom in and examine it.
@@ -1183,7 +1183,7 @@ plt.show()
 ```
 
 
-![png](output_60_0.png)
+![png](/images/output_60_0.png)
 
 
 However, the spike for CO2 is still in the range of the data, so we'll keep it and not bother smoothing it for now.
@@ -1553,7 +1553,7 @@ plt.show()
 ```
 
 
-![png](output_70_0.png)
+![png](/images/output_70_0.png)
 
 
 It can be seen that this is a continuation of the time series data from the training set. Now, the dates 2015-02-11 to 2015-02-19 are given. The same seasonality pattern of no occupancy for 2 consecutive days (2015-02-14 and 2015-02-15) can be observed, which indicates conditional seasonality. Add columns for Weekday or Weekend and Hour to take into account this seasonality for predicting Occupancy. Also, note that the time range is quite short here, and none of the variables lead us to predict that there is a trend component to this time series. Therefore, assume there is no trend component.
@@ -1918,7 +1918,7 @@ plt.show()
 ```
 
 
-![png](output_90_0.png)
+![png](/images/output_90_0.png)
 
 
 The Decision Tree plot shows that X[2] (Light) is the most important feature, followed by X[3] (CO2) and X[0] (Temperature).
@@ -1971,7 +1971,7 @@ print("Testing accuracy out of a total %d points : %f" % (X_test.shape[0], accur
     Testing accuracy out of a total 4880 points : 0.996107
 
 
-The accuracy on the test set is 0.996107, which is very high!
+The accuracy on the test set is **0.996107**, which is very high!
 
 
 ```python
@@ -1997,11 +1997,11 @@ for title, normalize in titles_options:
 
 
 
-![png](output_99_1.png)
+![png](/images/output_99_1.png)
 
 
 
-![png](output_99_2.png)
+![png](/images/output_99_2.png)
 
 
 #### Conclusion
