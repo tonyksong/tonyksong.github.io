@@ -1,0 +1,3 @@
+I"€<p>In this post, I will demonstrate how to perform some simple analyses on the <a href="https://catalog.data.gov/dataset/legally-operating-businesses-93b76/resource/4a8707e5-0139-42bc-949d-33c0a5170f7c">Legally Operating Businesses in NYC</a> dataset. Iâ€™ll be reading in the dataset from the json format, so it will require some manipulation to read and pull the data we want.</p>
+
+:ET
