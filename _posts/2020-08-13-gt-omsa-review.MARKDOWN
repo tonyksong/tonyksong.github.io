@@ -4,7 +4,7 @@ title:  "Georgia Tech Online Master of Science in Analytics (OMSA) Review"
 date:   2020-08-12 18:34:43 -0400
 categories: omsa
 ---
-This August 2020, I finally graduated with a Master of Science in Analytics from Georgia Tech. It took me exactly two years over six consecutive semesters, taking six credits (two courses) per semester. It was an amazing journey. There were times I wanted to quit or not put as much effort into an assignment, but I’m glad I could finish saying I did my best and gave it my all. 
+This August 2020, I finally graduated with a [Master of Science in Analytics from Georgia Tech](https://pe.gatech.edu/degrees/analytics). It took me exactly two years over six consecutive semesters, taking six credits (two courses) per semester. It was an amazing journey. There were times I wanted to quit or not put as much effort into an assignment, but I’m glad I could finish saying I did my best and gave it my all. 
 
 ### My Background
 
@@ -12,7 +12,7 @@ To give a little background on me, my original goal (like probably most people t
 
 ### Why I chose OMSA
 
-When I was choosing where to apply, my criteria was that the school had to have a remote learning option, since I didn’t want to leave my full-time job, and that it had to have a strong reputation. I actually considered and applied to only three programs: UC Berkeley Master of Information and Data Science (MIDS), UC Illinois Master of Computer Science in Data Science (MCS-DS), and Georgia Tech’s Master of Analytics (OMSA). I studied hard and did well enough on my GRE’s, and I made sure to get strong recommendation letters from my current and previous supervisors. However, the decision was made easy for me, because I only got into OMSA. In the end, I’m actually really glad I did OMSA over the other two programs. Here is my reasoning:
+When I was choosing where to apply, my criteria was that the school had to have a remote learning option, since I didn’t want to leave my full-time job, and that it had to have a strong reputation. I actually considered and applied to only three programs: [UC Berkeley Master of Information and Data Science (MIDS)](https://ischoolonline.berkeley.edu/data-science/), [University of Illinois Master of Computer Science in Data Science (MCS-DS)](https://cs.illinois.edu/academics/graduate/professional-mcs/online-master-computer-science-data-science), and Georgia Tech’s Master of Analytics (OMSA). I studied hard and did well enough on my GRE’s, and I made sure to get strong recommendation letters from my current and previous supervisors. However, the decision was made easy for me, because I only got into OMSA. In the end, I’m actually really glad I did OMSA over the other two programs. Here is my reasoning:
 
 1. **Cost**: The cost of OMSA is significantly better than MCS-DS and MIDS. OMSA is ~$11K, while MCS-DS is ~$22K, and MIDS is a whopping $70K. Sure, the Georgia Tech name may not carry as far as Berkeley or Illinois in some circles, but in the end, it’s still a Master’s degree from a Top 10 school. Not to mention that GT is the only program that has “Master of Science” on the degree, not some other kind of Master’s.
 2. **Professors**: Sure, the lectures are not live and are pre-recorded for OMSA, but they are taught by the actual professors from the on-campus version of the program, and you can still interact with most of them through the course forums. Great networking opportunity! On the other hand, I’ve heard that some of the teachers for MIDS may not be actual UC Berkeley faculty, but rather working professionals in the field.
@@ -21,7 +21,7 @@ When I was choosing where to apply, my criteria was that the school had to have 
 
 ### My Course Journey
 
-The following describes the courses that I took each semester:
+There are quite a lot of [courses offered](https://pe.gatech.edu/sites/pe.gatech.edu/files/Mkg-LPs/OMSA/OMS-Analytics-Spring-2019-Course-List-With-Previews.pdf) in the curriculum. The following describes the courses that I took each semester. I went for the [Computational Data Analytics Track](https://www.analytics.gatech.edu/curriculum/computational-data-analytics-track):
 
 #### Fall 2018
 *ISYE 6501 Introduction to Analytics Modeling*
@@ -77,13 +77,8 @@ There are other courses offered in the curriculum, and GT is constantly adding m
 
 ### Conclusion
 
-For anyone considering Georgia Tech’s Online Master of Science in Analytics (OMSA) program, I would highly recommend it. I went from not knowing what pandas was to being able to wrangle complex data sets without referencing Stack Overflow too much. Before the program, I didn’t really know what machine learning was, and now I can describe the underlying math behind most popular ML algorithms, describe the pros and cons of each, and know when to apply them.
+For anyone considering [Georgia Tech’s Online Master of Science in Analytics (OMSA) program](https://pe.gatech.edu/degrees/analytics), I would highly recommend it. I went from not knowing what pandas was to being able to wrangle complex data sets without referencing Stack Overflow too much. Before the program, I didn’t really know what machine learning was, and now I can describe the underlying math behind most popular ML algorithms, describe the pros and cons of each, and know when to apply them.
 
 There were all types of people at different stages in their career. Some, like me, were coming from a non-traditional background and trying to transition into data science. Some were already data analysts or scientists and just wanted to deepen their understanding. Some were seasoned, older professionals that were just doing the program for fun. I even heard that the youngest person enrolled in the program was 16 years old! 
 
-Bottom line: The GT OMSA program was definitely worth it. For me, it was a no-brainer. I was trying to make a career transition, already had basic probability and statistics and programming knowledge, and I didn’t want to sacrifice my full-time job. My previous employer reimbursed my tuition (although it was not much anyway). Although there’s still always much to learn, and the field is constantly evolving, I feel confident and well-equipped to begin my career in Data Science, thanks to Georgia Tech’s Master of Analytics program!
-
-
-<!-- 
-[jhu-viz]: https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6
-[covid19nyc]: https://tonyksong.github.io/covid19nyc.html -->
+**Bottom line**: The GT OMSA program was definitely worth it. For me, it was a no-brainer. I was trying to make a career transition, already had basic probability and statistics and programming knowledge, and I didn’t want to sacrifice my full-time job. My previous employer reimbursed my tuition (although it was not much anyway). Although there’s still always much to learn, and the field is constantly evolving, I feel confident and well-equipped to begin my career in Data Science, thanks to Georgia Tech’s Master of Analytics program!
