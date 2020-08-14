@@ -4,6 +4,8 @@ title:  "Georgia Tech Online Master of Science in Analytics (OMSA) Review"
 date:   2020-08-12 18:34:43 -0400
 categories: omsa
 ---
+![OMSA Logo](/images/OMSA_Logo.png)
+
 This August 2020, I finally graduated with a [Master of Science in Analytics from Georgia Tech](https://pe.gatech.edu/degrees/analytics). It took me exactly two years over six consecutive semesters, taking six credits (two courses) per semester. It was an amazing journey. There were times I wanted to quit or not put as much effort into an assignment, but I’m glad I could finish saying I did my best and gave it my all. 
 
 ### My Background
