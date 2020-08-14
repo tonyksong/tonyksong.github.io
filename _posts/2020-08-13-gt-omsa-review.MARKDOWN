@@ -21,6 +21,8 @@ When I was choosing where to apply, my criteria was that the school had to have 
 3. **History**: Georgia Tech already had a great reputation for their [Online Master of Computer Science (OMSCS)](https://omscs.gatech.edu/), which was introduced in 2013. Taking that model, GT took their on-campus Master of Analytics program and introduced the online version in 2016. So, it gave me some assurance that they already knew what they were doing with this program, and there would be less technical or administrative hiccups.
 4. **Community**: The online community for OMSA was fantastic. I made a lot of friends through the Slack community, and people were very friendly and supportive.
 
+You can also read this [KDNuggets](https://www.kdnuggets.com/2019/04/best-masters-data-science-analytics-online.html) article that compares the best Online Master of Science in Data Science & Analytics programs. 
+
 ### My Course Journey
 
 There are quite a lot of [courses offered](https://pe.gatech.edu/sites/pe.gatech.edu/files/Mkg-LPs/OMSA/OMS-Analytics-Spring-2019-Course-List-With-Previews.pdf) in the curriculum. The following describes the courses that I took each semester. I went for the [Computational Data Analytics Track](https://www.analytics.gatech.edu/curriculum/computational-data-analytics-track):
