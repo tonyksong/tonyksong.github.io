@@ -592,3 +592,5 @@ for title, normalize in titles_options:
 
 #### Conclusion
 The final model chosen to predict Occupancy when the variables Temperature, Humidity, Light, and CO2 were forecasted from the training set was a Support Vector Model with margin C=0.01 and kernel='rbf'. This model performed the best in the validation set and resulted in a 89.7% accuracy in the test set. The confusion matrix shows that out of 4880 total test data points (minutes), 3282 points were correctly identified as unoccupied (true negatives), 1097 points were correctly identified as occupied (true positives), 501 points were incorrectly identified as occupied when they were unoccupied (false positives), and 0 points were incorrectly identified as unoccupied when they were occupied (false negatives). For the future, the model could be improved by tuning the trend component for forecasting the variables, and building and testing models on subsets of the parameters.
+
+[occupancy]: https://archive.ics.uci.edu/ml/datasets/Occupancy+Detection+
