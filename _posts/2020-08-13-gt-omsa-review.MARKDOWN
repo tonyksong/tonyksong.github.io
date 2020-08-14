@@ -8,7 +8,7 @@ This August 2020, I finally graduated with a [Master of Science in Analytics fro
 
 ### My Background
 
-To give a little background on me, my original goal (like probably most people thinking about doing this program) was to help me get into a career in data science. I come from a “non-traditional” background, having worked as a medical device engineer doing mostly mechanical engineering and physical product development. However, I was always interested in the data analysis and statistical storytelling part of my job, and I wanted to get deeper knowledge in those areas. I considered doing a bootcamp but decided to go for a full-on Master’s, because I thought it would give me more credibility, especially since I didn’t have any direct data analytics work experience, and I also thought it would be a great personal achievement. I worked as a medical device engineer for about six years before starting the program.
+My original goal (like probably most people thinking about doing this program) was to help me get into a career in data science. I come from a “non-traditional” background, having worked as a medical device engineer doing mostly mechanical engineering and physical product development. However, I was always interested in the data analysis and statistical storytelling part of my job, and I wanted to get deeper knowledge in those areas. I considered doing a bootcamp but decided to go for a full-on Master’s, because I thought it would give me more credibility, especially since I didn’t have any direct data analytics work experience, and I also thought it would be a great personal achievement. I worked as a medical device engineer for about six years before starting the program.
 
 ### Why I chose OMSA
 
